@@ -28,7 +28,7 @@ uv pip install mcp-sse-authorizer
 Or run directly from the GitHub repository without installing:
 
 ```bash
-uv tool run github.com/lnagel/mcp-sse-authorizer [MCP_URL] [--client-id CLIENT_ID]
+uv tool run --from "mcp-sse-authorizer@git+https://github.com/lnagel/mcp-sse-authorizer" mcp-authorizer [MCP_URL] [--client-id CLIENT_ID]
 ```
 
 Or clone the repository:
@@ -56,7 +56,7 @@ uv run mcp_authorizer.py [MCP_URL] [--client-id CLIENT_ID]
 Or run directly from GitHub:
 
 ```bash
-uv tool run github.com/lnagel/mcp-sse-authorizer [MCP_URL] [--client-id CLIENT_ID]
+uv tool run --from "mcp-sse-authorizer@git+https://github.com/lnagel/mcp-sse-authorizer" mcp-authorizer [MCP_URL] [--client-id CLIENT_ID]
 ```
 
 ### Arguments
@@ -71,13 +71,13 @@ uv tool run github.com/lnagel/mcp-sse-authorizer [MCP_URL] [--client-id CLIENT_I
 python mcp_authorizer.py https://mcp.example.com/v1/sse
 
 # Running from GitHub repository
-uv tool run github.com/lnagel/mcp-sse-authorizer https://mcp.example.com/v1/sse
+uv tool run --from "mcp-sse-authorizer@git+https://github.com/lnagel/mcp-sse-authorizer" mcp-authorizer https://mcp.example.com/v1/sse
 ```
 
 If the MCP server supports dynamic client registration, the tool will register a new client automatically. Otherwise, you'll need to provide a pre-registered client ID:
 
 ```bash
-uv tool run github.com/lnagel/mcp-sse-authorizer https://mcp.example.com/v1/sse --client-id your_client_id
+uv tool run --from "mcp-sse-authorizer@git+https://github.com/lnagel/mcp-sse-authorizer" mcp-authorizer https://mcp.example.com/v1/sse --client-id your_client_id
 ```
 
 ## Authorization Flow
